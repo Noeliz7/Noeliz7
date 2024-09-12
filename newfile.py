@@ -1,29 +1,31 @@
-from turtle import Turtle, exitonclick
+from turtle import Turtle
 
 def draw_h():
     h = Turtle()
-    h.color("pink")
+    h.color("purple")
     h.fillcolor("yellow")
 
     h.pensize(5)
 
-    h.penup()
-    h.goto(-110, 0)
     h.pendown()
-
-    h.begin_fill()
-    
-    h.setheading(90)
-    h.forward(80)
-
-    h.right(90)
+    h.penup()
     h.forward(20)
 
-    h.goto(n.xcor() + 80, h.ycor() - 70)
+    h.pendown()
+    h.penup()
+    #n.hideturtle()
+      
+      
+
+
+
+
 
 
 
 if __name__ == "__main__":
     draw_h()
     exitonclick()
+    
+
 
