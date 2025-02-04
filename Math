@@ -1,0 +1,70 @@
+from turtle import Turtle, Screen 
+
+
+class Math(Square):
+
+    def __init__(self):
+        super().__init__()
+        self.shape("")
+
+s = Screen()
+s.register_shape("Square")
+
+
+m = Math()
+
+s.mainloop()
+
+import random
+
+def generate_question():
+    ops = ['+', '-', '*', '/']
+    num1, num2 = random.randint(1,10), random.randint (1, 10)
+    operation = random.choice(ops)
+    if operation == '/' and (num2 == 0 or num1 % num2 != 0):
+        return generate_question()
+    
+    result = eval(str(num1)) + operation + str(num2)
+
+    return(f' {num1} {operation} {num2} = ?') , result, random.simple(range(num1, result), 4)
+
+def run_quiz(num_questions):
+    correct_answers = 0
+    for i in range(num_questions):
+        question, answer, choices = generate_question()
+        print(f' Question {i+1}: question')
+        choice = input ('Choice your answer (1/2/3/4): ')
+        if choice in ['1','2','3','4'] and int (choice) == answer :
+            correct_answer += 1
+            print('Correct!')
+        else :
+            print (f'Wrong, the correct answer is {answer}')
+        print(f'You got {correct_answers} correct out of {num_questions}')
+
+run_quiz(5)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

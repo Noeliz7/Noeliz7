@@ -1,0 +1,15 @@
+ages = [17,18,18,14,19,13,30,40,21,17,5,17,17,16,27]
+
+# Count the number of 17s in the ages list 
+numberOf17s = 0
+for age in ages:
+    # USE AN IF STATEMENT
+    if age == 17:
+        numberOf17s += 1
+print(numberOf17s)
+
+
+
+
+
+
